@@ -10,6 +10,14 @@ CAD Guardian Pareto quick-start automation kit for drafters, CAD automation peer
 
 > This CAD library is in development. This is an early public preview for feedback on the best business case, workflow shape, and proof path.
 
+## Live site
+
+- GitHub Pages: https://tsmithcode.github.io/cadguardian-solidworks-pdm-readiness-proof/
+- Download ZIP: https://github.com/tsmithcode/cadguardian-solidworks-pdm-readiness-proof/archive/refs/heads/main.zip
+- CAD Guardian: https://www.cadguardian.com/
+- TSmithCode.ai: https://www.tsmithcode.ai/
+- Service page: https://www.cadguardian.com/services/solidworks-pdm-readiness
+
 ## Why this exists
 
 Score file references, custom properties, BOM readiness, and release-state ownership before cleanup, migration, or PDM automation expands.
@@ -64,7 +72,3 @@ dotnet build quickstart
 ## Public fixture boundary
 
 Only approved public sample files are bundled. No client files, private drawings, credentials, raw opportunity notes, or license-uncertain CAD assets are included.
-
-## Service page
-
-https://www.cadguardian.com/services/solidworks-pdm-readiness

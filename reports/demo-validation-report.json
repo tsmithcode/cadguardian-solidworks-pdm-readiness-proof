@@ -1,0 +1,33 @@
+{
+  "requestId": "cadg-solidworks-demo-001",
+  "runtimeDecision": "PDM readiness assessment before automation or migration.",
+  "expectedOutputs": [
+    "file reference map",
+    "custom property report",
+    "BOM reconciliation",
+    "release state checklist"
+  ],
+  "validation": [
+    {
+      "rule": "properties present",
+      "status": "review-ready",
+      "evidence": "Synthetic fixture only. Run local CAD checks against AgentOps-approved source files for tool receipts."
+    },
+    {
+      "rule": "BOM rows reconcile",
+      "status": "review-ready",
+      "evidence": "Synthetic fixture only. Run local CAD checks against AgentOps-approved source files for tool receipts."
+    },
+    {
+      "rule": "references categorized",
+      "status": "review-ready",
+      "evidence": "Synthetic fixture only. Run local CAD checks against AgentOps-approved source files for tool receipts."
+    },
+    {
+      "rule": "release owner named",
+      "status": "review-ready",
+      "evidence": "Synthetic fixture only. Run local CAD checks against AgentOps-approved source files for tool receipts."
+    }
+  ],
+  "publicBoundary": "No private client files, login material, raw opportunity notes, or catalog-only native CAD binaries are included."
+}

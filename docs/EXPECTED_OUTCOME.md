@@ -14,14 +14,13 @@ reports/quickstart-report.json
 
 The report must include:
 
-- `Status`: review-ready or review-required.
+- `Status`: `ready-for-private-sample` or `needs-review`.
+- `BusinessImpact`: why this kit exists.
 - `Fixtures`: approved public fixture receipts with size and SHA-256.
-- `Checks`: validation checks tied to the workflow.
-- `ApiSignals`: the native/API vocabulary this kit is prepared to discuss.
+- `ParetoChecks`: checks tied to the first valuable automation slice.
+- `ReusableRoutines`: the small code patterns meant to be adapted.
+- `ApiSignals`: native/API vocabulary for the next technical conversation.
 
-Expected outputs for this kit:
+Expected first decision:
 
-- pdm-readiness-score
-- custom-property-report
-- BOM-checks
-- native adapter notes
+Pick one product family, map the required properties and release states, then decide whether the first move is cleanup, PDM check, or API adapter.

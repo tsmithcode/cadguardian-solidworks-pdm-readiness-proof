@@ -1,18 +1,12 @@
 # SolidWorks and PDM Readiness Quick-Start Kit
 
-CAD Guardian quick-start automation kit for peer walkthroughs, technical interviews, and buyer-facing business-case discussions.
+CAD Guardian Pareto quick-start automation kit for drafters, CAD automation peers, technical interviews, and buyer-facing business-case discussions.
 
 > This CAD library is in development. This is an early public preview for feedback on the best business case, workflow shape, and proof path.
 
-## STAR story
+## Why this exists
 
-**Situation:** A product team wants cleanup, automation, or migration, but file references, custom properties, BOM rows, and release states are not trustworthy yet.
-
-**Task:** Create a public-safe quickstart that scores readiness before a SolidWorks API or PDM add-in touches production files.
-
-**Action:** Bundle approved NIST STEP/SolidWorks fixtures, validate package metadata, and show COM/API plus PDM add-in scaffolds.
-
-**Result:** Interviewers can run the kit, inspect the readiness report, and discuss when native SolidWorks or PDM execution becomes justified.
+Score file references, custom properties, BOM readiness, and release-state ownership before cleanup, migration, or PDM automation expands.
 
 ## Fast run
 
@@ -21,28 +15,33 @@ npm run doctor
 npm run verify
 npm run demo
 dotnet build quickstart
-dotnet run --project quickstart
 ```
 
-The C# quickstart writes `reports/quickstart-report.json`. The Node demo writes `reports/demo-validation-report.json`.
+`npm run demo` runs the C# quickstart and writes `reports/quickstart-report.json`.
 
-## What is included
+## What is worth reusing
 
-- Runnable C# quickstart in `quickstart/`.
-- Optional native/runtime examples in `native/`.
-- Safe public fixtures in `fixtures/public/`.
-- STAR story, API walkthrough, native runtime notes, interview script, and expected outcome docs.
+- `quickstart/Program.cs`: a small C# package-readiness engine with fixture receipts, Pareto checks, native runtime gates, and a JSON report.
+- `native/`: optional API/runtime examples for the licensed CAD environment.
+- `fixtures/public/`: approved public CAD fixtures only.
+- `docs/USER_GUIDE.md`: how to run and adapt the kit.
+- `docs/INTERVIEW_SCRIPT.md`: how to explain the business case without guessing.
 
-## Workflow
+## STAR story
 
-- Product family request
-- STEP/SLDPRT fixture inventory
-- Custom property check
-- BOM readiness check
-- PDM state map
-- Release package report
-- Manufacturing review
-- Cleanup or pilot decision
+**Situation:** A product team wants cleanup, automation, or migration, but file references, custom properties, BOM rows, and release states are not trustworthy yet.
+
+**Task:** Score readiness before a SolidWorks API or PDM add-in touches production files.
+
+**Action:** Bundle public STEP/SolidWorks fixtures, validate package metadata, and show COM/API plus PDM add-in scaffolds.
+
+**Result:** A reviewer can run the kit, inspect readiness, and decide when native SolidWorks or PDM execution becomes justified.
+
+## Pareto checks
+
+- **File reference inventory:** Stops migration or automation from breaking references users trust. Handoff: `IModelDoc2`, `IModelDocExtension`, and selected document reference inspection.
+- **Custom property and BOM readiness:** Finds the few fields that drive quote, manufacturing, and release errors. Handoff: `CustomPropertyManager`, `IAssemblyDoc`, `IComponent2`, and BOM extraction.
+- **PDM release-state boundary:** Keeps PDM work focused on ownership, state, and approval instead of broad vault churn. Handoff: `IEdmAddIn5`, `IEdmVault5`, and `IEdmCmd` after release states are named.
 
 ## API and runtime signals
 

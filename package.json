@@ -1,16 +1,16 @@
 {
   "name": "cadguardian-solidworks-pdm-readiness-proof",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "private": false,
   "type": "module",
   "scripts": {
     "doctor": "node scripts/doctor.mjs",
     "verify": "node scripts/verify.mjs",
-    "demo": "node scripts/demo.mjs",
+    "demo": "dotnet run --project quickstart",
     "runtime:check": "node scripts/runtime-check.mjs",
     "quickstart:build": "dotnet build quickstart",
     "quickstart:run": "dotnet run --project quickstart",
-    "kit": "npm run doctor && npm run verify && npm run demo && npm run quickstart:build && npm run quickstart:run",
+    "kit": "npm run doctor && npm run verify && npm run demo && npm run quickstart:build",
     "sanitize": "node scripts/sanitize.mjs"
   }
 }

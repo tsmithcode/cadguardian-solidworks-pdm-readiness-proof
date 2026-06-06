@@ -7,11 +7,18 @@ const required = [
   "assets/cad-guardian-logo-highlighted.png",
   "docs/story.md",
   "docs/architecture.md",
+  "docs/USER_GUIDE.md",
+  "docs/RUNTIME_GUIDE.md",
+  "docs/API_REFERENCES.md",
+  "docs/EXPECTED_OUTCOME.md",
+  "docs/DEVELOPMENT_PREVIEW.md",
   "samples/manifest/agentops-proof-packet.json",
   "samples/manifest/source-inventory.json",
   "samples/input/request.json",
   "samples/expected-output/validation-report.sample.json",
   "src/adapter/index.mjs",
+  "scripts/doctor.mjs",
+  "scripts/runtime-check.mjs",
 ];
 const forbiddenStringParts = [
   ["Crown", "Castle"],

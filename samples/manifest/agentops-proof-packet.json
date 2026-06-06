@@ -22,6 +22,39 @@
     "BOM",
     "release states"
   ],
+  "officialDocs": [
+    {
+      "label": "SOLIDWORKS API IModelDoc2",
+      "url": "https://help.solidworks.com/2023/English/api/sldworksapi/SOLIDWORKS.Interop.sldworks~SOLIDWORKS.Interop.sldworks.IModelDoc2.html",
+      "use": "Model document vocabulary for parts, assemblies, and drawings."
+    },
+    {
+      "label": "SOLIDWORKS PDM Add-ins",
+      "url": "https://help.solidworks.com/2026/english/api/epdmapi/AddInApp.htm",
+      "use": "PDM add-in and lifecycle extension vocabulary."
+    },
+    {
+      "label": "AWS API Gateway",
+      "url": "https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html",
+      "use": "API front door, status endpoints, and service boundary discussion."
+    },
+    {
+      "label": "AWS Step Functions",
+      "url": "https://docs.aws.amazon.com/step-functions/latest/dg/welcome.html",
+      "use": "State-machine orchestration, retries, and staged workflow discussion."
+    },
+    {
+      "label": "Azure Functions",
+      "url": "https://learn.microsoft.com/en-us/azure/azure-functions/functions-overview",
+      "use": "Event-driven job/API shape when the platform standard is Azure."
+    },
+    {
+      "label": "Azure Service Bus",
+      "url": "https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-overview",
+      "use": "Queue and service-bus vocabulary for async CAD work."
+    }
+  ],
+  "developmentPreviewWarning": "This CAD library is in development. This is an early public preview for feedback on the best business case, workflow shape, and proof path.",
   "publicBoundary": "Public packet contains synthetic fixtures, source manifests, code scaffolds, and validation posture only.",
   "agentOpsPolicy": {
     "noSourceMutation": true,

@@ -4,8 +4,10 @@
   "private": false,
   "type": "module",
   "scripts": {
+    "doctor": "node scripts/doctor.mjs",
     "verify": "node scripts/verify.mjs",
     "demo": "node scripts/demo.mjs",
+    "runtime:check": "node scripts/runtime-check.mjs",
     "sanitize": "node scripts/sanitize.mjs"
   }
 }

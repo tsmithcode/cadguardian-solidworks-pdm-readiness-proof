@@ -1,0 +1,21 @@
+{
+  "policy": "NIST unrestricted STEP/SolidWorks references stay catalog-controlled. This repo publishes manifests, synthetic BOM/property data, and validation posture.",
+  "filesAreBundled": false,
+  "reason": "AgentOps policy blocks raw CAD cloud upload. Public proof references approved library sources and uses synthetic fixtures.",
+  "sources": [
+    {
+      "sourceId": "nist_pmi_step_files",
+      "relativePath": "raw/nist_pmi_step_files/NIST-PMI-STEP-Files/AP203 geometry only/nist_ctc_01_asme1_rd.stp",
+      "format": "STEP",
+      "usage": "Metadata-first public reference.",
+      "publicUse": "Reference only."
+    },
+    {
+      "sourceId": "nist_ftc_ctc_pmi_cad_models",
+      "relativePath": "raw/nist_ftc_ctc_pmi_cad_models/NIST-FTC-CTC-PMI-CAD-models/SolidWorks MBD 2018/nist_ctc_01_asme1_rd_sw1802.SLDPRT",
+      "format": "SLDPRT",
+      "usage": "Catalog-only native SolidWorks reference.",
+      "publicUse": "No geometry or PDM state claim without local tool receipt."
+    }
+  ]
+}

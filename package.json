@@ -1,0 +1,11 @@
+{
+  "name": "cadguardian-solidworks-pdm-readiness-proof",
+  "version": "1.0.0",
+  "private": false,
+  "type": "module",
+  "scripts": {
+    "verify": "node scripts/verify.mjs",
+    "demo": "node scripts/demo.mjs",
+    "sanitize": "node scripts/sanitize.mjs"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "cadg.public_proof_packet.1",
+  "repo": "tsmithcode/cadguardian-solidworks-pdm-readiness-proof",
+  "title": "SolidWorks and PDM Readiness Proof",
+  "servicePath": "https://www.cadguardian.com/services/solidworks-pdm-readiness",
+  "story": "A product team wants cleanup, automation, or migration, but file references, configurations, custom properties, BOM rows, and release states are not yet trustworthy.",
+  "workflow": [
+    "Product family request",
+    "File reference inventory",
+    "Property and BOM contract",
+    "PDM state map",
+    "STEP/native catalog references",
+    "Release package check",
+    "Manufacturing review",
+    "Cleanup or pilot decision"
+  ],
+  "stack": [
+    "SolidWorks",
+    "PDM",
+    "SLDPRT/SLDASM/SLDDRW",
+    "STEP",
+    "BOM",
+    "release states"
+  ],
+  "publicBoundary": "Public packet contains synthetic fixtures, source manifests, code scaffolds, and validation posture only.",
+  "agentOpsPolicy": {
+    "noSourceMutation": true,
+    "noCloudUploadOfRawCad": true,
+    "rawCadBinariesToAi": false,
+    "catalogOnlyFormats": [
+      ".dgn",
+      ".dwg",
+      ".iam",
+      ".idw",
+      ".ipt",
+      ".rfa",
+      ".rvt",
+      ".sldasm",
+      ".slddrw",
+      ".sldprt"
+    ]
+  }
+}

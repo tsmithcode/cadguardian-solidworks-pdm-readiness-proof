@@ -1,0 +1,33 @@
+{
+  "requestId": "cadg-solidworks-demo-001",
+  "status": "review-ready",
+  "decision": "Use this repo to discuss workflow, runtime, validation, and handoff before touching private files.",
+  "checks": [
+    {
+      "rule": "properties present",
+      "result": "sample-pass",
+      "evidence": "Synthetic fixture and manifest-backed source reference."
+    },
+    {
+      "rule": "BOM rows reconcile",
+      "result": "sample-pass",
+      "evidence": "Synthetic fixture and manifest-backed source reference."
+    },
+    {
+      "rule": "references categorized",
+      "result": "sample-pass",
+      "evidence": "Synthetic fixture and manifest-backed source reference."
+    },
+    {
+      "rule": "release owner named",
+      "result": "sample-pass",
+      "evidence": "Synthetic fixture and manifest-backed source reference."
+    }
+  ],
+  "stopConditions": [
+    "Missing accepted output example.",
+    "Runtime cannot produce a local tool receipt.",
+    "Reviewer cannot name the owner of an exception.",
+    "Requested proof requires private files in a public repo."
+  ]
+}

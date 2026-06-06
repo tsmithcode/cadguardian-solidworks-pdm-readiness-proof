@@ -1,0 +1,9 @@
+step,owner,evidence
+1,Product family request,review note
+2,File reference inventory,review note
+3,Property and BOM contract,review note
+4,PDM state map,review note
+5,STEP/native catalog references,review note
+6,Release package check,review note
+7,Manufacturing review,review note
+8,Cleanup or pilot decision,review note

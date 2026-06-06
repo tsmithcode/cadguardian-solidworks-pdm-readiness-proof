@@ -1,0 +1,17 @@
+{
+  "requestId": "cadg-solidworks-demo-001",
+  "productFamily": "demo-release-package",
+  "runtimeDecision": "PDM readiness assessment before automation or migration.",
+  "expectedOutputs": [
+    "file reference map",
+    "custom property report",
+    "BOM reconciliation",
+    "release state checklist"
+  ],
+  "validationRules": [
+    "properties present",
+    "BOM rows reconcile",
+    "references categorized",
+    "release owner named"
+  ]
+}

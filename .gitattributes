@@ -1,0 +1,7 @@
+docs/** linguist-documentation
+index.html linguist-documentation
+samples/** linguist-generated
+reports/** linguist-generated
+fixtures/public/** linguist-vendored
+assets/** linguist-vendored
+quickstart/** linguist-detectable

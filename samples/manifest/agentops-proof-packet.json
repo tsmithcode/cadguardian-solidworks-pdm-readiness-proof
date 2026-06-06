@@ -1,76 +1,71 @@
 {
-  "schemaVersion": "cadg.public_proof_packet.1",
+  "schemaVersion": "cadg.quick_start_automation_kit.2",
+  "kitType": "CAD Guardian quick-start automation kit",
   "repo": "tsmithcode/cadguardian-solidworks-pdm-readiness-proof",
-  "title": "SolidWorks and PDM Readiness Proof",
+  "title": "SolidWorks and PDM Readiness Quick-Start Kit",
   "servicePath": "https://www.cadguardian.com/services/solidworks-pdm-readiness",
-  "story": "A product team wants cleanup, automation, or migration, but file references, configurations, custom properties, BOM rows, and release states are not yet trustworthy.",
+  "star": {
+    "situation": "A product team wants cleanup, automation, or migration, but file references, custom properties, BOM rows, and release states are not trustworthy yet.",
+    "task": "Create a public-safe quickstart that scores readiness before a SolidWorks API or PDM add-in touches production files.",
+    "action": "Bundle approved NIST STEP/SolidWorks fixtures, validate package metadata, and show COM/API plus PDM add-in scaffolds.",
+    "result": "Interviewers can run the kit, inspect the readiness report, and discuss when native SolidWorks or PDM execution becomes justified."
+  },
   "workflow": [
     "Product family request",
-    "File reference inventory",
-    "Property and BOM contract",
+    "STEP/SLDPRT fixture inventory",
+    "Custom property check",
+    "BOM readiness check",
     "PDM state map",
-    "STEP/native catalog references",
-    "Release package check",
+    "Release package report",
     "Manufacturing review",
     "Cleanup or pilot decision"
   ],
-  "stack": [
-    "SolidWorks",
-    "PDM",
-    "SLDPRT/SLDASM/SLDDRW",
-    "STEP",
-    "BOM",
-    "release states"
+  "apiSignals": [
+    "SldWorks",
+    "IModelDoc2",
+    "IModelDocExtension",
+    "CustomPropertyManager",
+    "IAssemblyDoc",
+    "IComponent2",
+    "IEdmAddIn5",
+    "IEdmVault5",
+    "IEdmCmd"
   ],
-  "officialDocs": [
+  "runCommands": {
+    "full": "npm run kit",
+    "csharp": "dotnet run --project quickstart",
+    "node": "npm run demo"
+  },
+  "expectedOutputPath": "reports/quickstart-report.json",
+  "fixtures": [
     {
-      "label": "SOLIDWORKS API IModelDoc2",
-      "url": "https://help.solidworks.com/2023/English/api/sldworksapi/SOLIDWORKS.Interop.sldworks~SOLIDWORKS.Interop.sldworks.IModelDoc2.html",
-      "use": "Model document vocabulary for parts, assemblies, and drawings."
+      "source": "nist_ftc_ctc_pmi_cad_models/NIST-FTC-CTC-PMI-CAD-models/SolidWorks MBD 2018/nist_ctc_01_asme1_rd_sw1802.SLDPRT",
+      "destination": "fixtures/public/nist/nist_ctc_01_asme1_rd_sw1802.SLDPRT",
+      "sourceId": "nist_ftc_ctc_pmi_cad_models",
+      "license": "NIST unrestricted test case material; no endorsement implied",
+      "attribution": "NIST MBE PMI SolidWorks reference",
+      "use": "Native SolidWorks package-presence fixture.",
+      "tokens": [],
+      "bundledPath": "fixtures/public/nist/nist_ctc_01_asme1_rd_sw1802.SLDPRT",
+      "sizeBytes": 521280,
+      "sha256": "0557f86aefe6796180416871426dddca83d7ca32bd400770999441aa2705212a"
     },
     {
-      "label": "SOLIDWORKS PDM Add-ins",
-      "url": "https://help.solidworks.com/2026/english/api/epdmapi/AddInApp.htm",
-      "use": "PDM add-in and lifecycle extension vocabulary."
-    },
-    {
-      "label": "AWS API Gateway",
-      "url": "https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html",
-      "use": "API front door, status endpoints, and service boundary discussion."
-    },
-    {
-      "label": "AWS Step Functions",
-      "url": "https://docs.aws.amazon.com/step-functions/latest/dg/welcome.html",
-      "use": "State-machine orchestration, retries, and staged workflow discussion."
-    },
-    {
-      "label": "Azure Functions",
-      "url": "https://learn.microsoft.com/en-us/azure/azure-functions/functions-overview",
-      "use": "Event-driven job/API shape when the platform standard is Azure."
-    },
-    {
-      "label": "Azure Service Bus",
-      "url": "https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-overview",
-      "use": "Queue and service-bus vocabulary for async CAD work."
+      "source": "nist_pmi_step_files/NIST-PMI-STEP-Files/AP203 geometry only/nist_ctc_01_asme1_rd.stp",
+      "destination": "fixtures/public/nist/nist_ctc_01_asme1_rd.stp",
+      "sourceId": "nist_pmi_step_files",
+      "license": "NIST unrestricted test case material; no endorsement implied",
+      "attribution": "NIST PMI STEP reference",
+      "use": "Public text-readable STEP metadata fixture.",
+      "tokens": [
+        "ISO-10303",
+        "HEADER"
+      ],
+      "bundledPath": "fixtures/public/nist/nist_ctc_01_asme1_rd.stp",
+      "sizeBytes": 235171,
+      "sha256": "e081d518484d5c708c6729353237f94a7d97da2b74a10d60d4c0d146d67a5855"
     }
   ],
   "developmentPreviewWarning": "This CAD library is in development. This is an early public preview for feedback on the best business case, workflow shape, and proof path.",
-  "publicBoundary": "Public packet contains synthetic fixtures, source manifests, code scaffolds, and validation posture only.",
-  "agentOpsPolicy": {
-    "noSourceMutation": true,
-    "noCloudUploadOfRawCad": true,
-    "rawCadBinariesToAi": false,
-    "catalogOnlyFormats": [
-      ".dgn",
-      ".dwg",
-      ".iam",
-      ".idw",
-      ".ipt",
-      ".rfa",
-      ".rvt",
-      ".sldasm",
-      ".slddrw",
-      ".sldprt"
-    ]
-  }
+  "publicBoundary": "Public kit contains approved public fixtures, code examples, validation reports, and native adapter scaffolds only."
 }

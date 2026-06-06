@@ -1,7 +1,8 @@
 # Sanitization Checklist
 
 - No private client names.
-- No private drawings or native CAD binaries.
-- No login material or source system details.
+- No private drawings.
+- No credentials.
 - No raw opportunity notes.
-- No geometry or conversion claims without local tool receipts.
+- No license-uncertain CAD assets.
+- Native runtime claims require a local tool receipt.

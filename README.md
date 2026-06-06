@@ -1,70 +1,65 @@
-# SolidWorks and PDM Readiness Proof
+# SolidWorks and PDM Readiness Quick-Start Kit
 
-CAD Guardian proof repo for technical interviews, buyer reviews, and peer walkthroughs.
+CAD Guardian quick-start automation kit for peer walkthroughs, technical interviews, and buyer-facing business-case discussions.
 
 > This CAD library is in development. This is an early public preview for feedback on the best business case, workflow shape, and proof path.
 
-## Story
-A product team wants cleanup, automation, or migration, but file references, configurations, custom properties, BOM rows, and release states are not yet trustworthy.
+## STAR story
 
-## Business case
-The first decision is whether one product family or document class is ready for controlled PDM work.
+**Situation:** A product team wants cleanup, automation, or migration, but file references, custom properties, BOM rows, and release states are not trustworthy yet.
 
-## Workflow
-- Product family request
-- File reference inventory
-- Property and BOM contract
-- PDM state map
-- STEP/native catalog references
-- Release package check
-- Manufacturing review
-- Cleanup or pilot decision
+**Task:** Create a public-safe quickstart that scores readiness before a SolidWorks API or PDM add-in touches production files.
 
-## Stack vocabulary
-- SolidWorks
-- PDM
-- SLDPRT/SLDASM/SLDDRW
-- STEP
-- BOM
-- release states
+**Action:** Bundle approved NIST STEP/SolidWorks fixtures, validate package metadata, and show COM/API plus PDM add-in scaffolds.
 
-## Run
+**Result:** Interviewers can run the kit, inspect the readiness report, and discuss when native SolidWorks or PDM execution becomes justified.
+
+## Fast run
 
 ```bash
 npm run doctor
 npm run verify
 npm run demo
-npm run sanitize
+dotnet build quickstart
+dotnet run --project quickstart
 ```
 
-Expected demo output: `reports/demo-validation-report.json` with a review-ready status, validation checks, stop conditions, and the public CAD data boundary.
+The C# quickstart writes `reports/quickstart-report.json`. The Node demo writes `reports/demo-validation-report.json`.
 
-## Runtime model
-This repo is tiered:
+## What is included
 
-- Public demo: runs anywhere with Node.js and synthetic fixtures.
-- Optional native/runtime check: `npm run runtime:check` reports whether local CAD/API tooling appears available.
-- Real CAD files: stay in an AgentOps-controlled private library unless explicitly approved for a private runtime receipt.
+- Runnable C# quickstart in `quickstart/`.
+- Optional native/runtime examples in `native/`.
+- Safe public fixtures in `fixtures/public/`.
+- STAR story, API walkthrough, native runtime notes, interview script, and expected outcome docs.
 
-## Guides
-- [User guide](docs/USER_GUIDE.md)
-- [Runtime guide](docs/RUNTIME_GUIDE.md)
-- [API references](docs/API_REFERENCES.md)
-- [Expected outcome](docs/EXPECTED_OUTCOME.md)
-- [Development preview warning](docs/DEVELOPMENT_PREVIEW.md)
+## Workflow
 
-## Official references
-- [SOLIDWORKS API IModelDoc2](https://help.solidworks.com/2023/English/api/sldworksapi/SOLIDWORKS.Interop.sldworks~SOLIDWORKS.Interop.sldworks.IModelDoc2.html) - Model document vocabulary for parts, assemblies, and drawings.
-- [SOLIDWORKS PDM Add-ins](https://help.solidworks.com/2026/english/api/epdmapi/AddInApp.htm) - PDM add-in and lifecycle extension vocabulary.
-- [AWS API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html) - API front door, status endpoints, and service boundary discussion.
-- [AWS Step Functions](https://docs.aws.amazon.com/step-functions/latest/dg/welcome.html) - State-machine orchestration, retries, and staged workflow discussion.
-- [Azure Functions](https://learn.microsoft.com/en-us/azure/azure-functions/functions-overview) - Event-driven job/API shape when the platform standard is Azure.
-- [Azure Service Bus](https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-overview) - Queue and service-bus vocabulary for async CAD work.
+- Product family request
+- STEP/SLDPRT fixture inventory
+- Custom property check
+- BOM readiness check
+- PDM state map
+- Release package report
+- Manufacturing review
+- Cleanup or pilot decision
 
-## Public CAD data boundary
-NIST unrestricted STEP/SolidWorks references stay catalog-controlled. This repo publishes manifests, synthetic BOM/property data, and validation posture.
+## API and runtime signals
 
-This repository is built for public proof. It includes source inventory manifests, synthetic input fixtures, validation examples, and adapter code shaped for walkthroughs. It does not include private drawings, proprietary project files, login material, raw opportunity notes, or native CAD files that AgentOps marks catalog-only.
+- SldWorks
+- IModelDoc2
+- IModelDocExtension
+- CustomPropertyManager
+- IAssemblyDoc
+- IComponent2
+- IEdmAddIn5
+- IEdmVault5
+- IEdmCmd
 
-## Related service page
+## Public fixture boundary
+
+Only approved public sample files are bundled. No client files, private drawings, credentials, raw opportunity notes, or license-uncertain CAD assets are included.
+
+## Service page
+
 https://www.cadguardian.com/services/solidworks-pdm-readiness

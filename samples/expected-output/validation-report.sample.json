@@ -1,33 +1,34 @@
 {
-  "requestId": "cadg-solidworks-demo-001",
+  "requestId": "cadg-solidworks-kit-001",
   "status": "review-ready",
-  "decision": "Use this repo to discuss workflow, runtime, validation, and handoff before touching private files.",
+  "kitType": "CAD Guardian quick-start automation kit",
+  "decision": "Run the public quickstart, inspect fixture receipts, then decide whether native runtime proof is justified.",
   "checks": [
     {
-      "rule": "properties present",
+      "rule": "SolidWorks and STEP fixtures are present and attributed",
       "result": "sample-pass",
-      "evidence": "Synthetic fixture and manifest-backed source reference."
+      "evidence": "Public fixture, C# quickstart, or native/API walkthrough present."
     },
     {
-      "rule": "BOM rows reconcile",
+      "rule": "STEP fixture exposes ISO-10303 markers",
       "result": "sample-pass",
-      "evidence": "Synthetic fixture and manifest-backed source reference."
+      "evidence": "Public fixture, C# quickstart, or native/API walkthrough present."
     },
     {
-      "rule": "references categorized",
+      "rule": "Custom property, BOM, and release-state checks are represented",
       "result": "sample-pass",
-      "evidence": "Synthetic fixture and manifest-backed source reference."
+      "evidence": "Public fixture, C# quickstart, or native/API walkthrough present."
     },
     {
-      "rule": "release owner named",
+      "rule": "SolidWorks API and PDM add-in handoff is documented",
       "result": "sample-pass",
-      "evidence": "Synthetic fixture and manifest-backed source reference."
+      "evidence": "Public fixture, C# quickstart, or native/API walkthrough present."
     }
   ],
   "stopConditions": [
-    "Missing accepted output example.",
-    "Runtime cannot produce a local tool receipt.",
-    "Reviewer cannot name the owner of an exception.",
-    "Requested proof requires private files in a public repo."
+    "Accepted output examples are missing.",
+    "Native runtime cannot produce a local tool receipt.",
+    "Reviewer ownership is unclear.",
+    "Requested proof requires private or license-uncertain files in a public repo."
   ]
 }

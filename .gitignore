@@ -1,0 +1,4 @@
+quickstart/bin/
+quickstart/obj/
+node_modules/
+.DS_Store

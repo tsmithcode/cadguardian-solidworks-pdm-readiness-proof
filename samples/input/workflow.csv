@@ -1,9 +1,9 @@
-step,owner,evidence
-1,Product family request,review note
-2,File reference inventory,review note
-3,Property and BOM contract,review note
-4,PDM state map,review note
-5,STEP/native catalog references,review note
-6,Release package check,review note
-7,Manufacturing review,review note
-8,Cleanup or pilot decision,review note
+step,workflow,evidence
+1,Product family request,quickstart or native adapter note
+2,STEP/SLDPRT fixture inventory,quickstart or native adapter note
+3,Custom property check,quickstart or native adapter note
+4,BOM readiness check,quickstart or native adapter note
+5,PDM state map,quickstart or native adapter note
+6,Release package report,quickstart or native adapter note
+7,Manufacturing review,quickstart or native adapter note
+8,Cleanup or pilot decision,quickstart or native adapter note

@@ -1,24 +1,27 @@
 # Expected Outcome
 
-After running `npm run demo`, the repo writes:
+After running:
+
+```bash
+dotnet run --project quickstart
+```
+
+the repo writes:
 
 ```
-reports/demo-validation-report.json
+reports/quickstart-report.json
 ```
 
-The report should contain:
+The report must include:
 
-- `requestId`: cadg-solidworks-demo-001
-- `runtimeDecision`: PDM readiness assessment before automation or migration.
-- `expectedOutputs`: file reference map, custom property report, BOM reconciliation, release state checklist
-- `validation`: one review-ready row per validation rule
-- `publicBoundary`: a reminder that private files and native CAD binaries are not bundled
+- `Status`: review-ready or review-required.
+- `Fixtures`: approved public fixture receipts with size and SHA-256.
+- `Checks`: validation checks tied to the workflow.
+- `ApiSignals`: the native/API vocabulary this kit is prepared to discuss.
 
-## Stop conditions
+Expected outputs for this kit:
 
-The proof should stop instead of overclaiming when:
-
-- Accepted output examples are missing.
-- Native runtime execution cannot produce a local tool receipt.
-- Reviewer ownership is unclear.
-- The requested proof requires private files in a public repo.
+- pdm-readiness-score
+- custom-property-report
+- BOM-checks
+- native adapter notes

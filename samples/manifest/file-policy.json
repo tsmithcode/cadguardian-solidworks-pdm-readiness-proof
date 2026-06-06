@@ -6,19 +6,13 @@
     "docs",
     "scripts",
     "src",
-    "synthetic JSON/CSV fixtures"
+    "quickstart",
+    "native",
+    "fixtures/public entries listed in fixture-attribution.json"
   ],
-  "blockedPublicFiles": [
-    ".dgn",
-    ".dwg",
-    ".iam",
-    ".idw",
-    ".ipt",
-    ".rfa",
-    ".rvt",
-    ".sldasm",
-    ".slddrw",
-    ".sldprt"
+  "fixturePaths": [
+    "fixtures/public/nist/nist_ctc_01_asme1_rd_sw1802.SLDPRT",
+    "fixtures/public/nist/nist_ctc_01_asme1_rd.stp"
   ],
-  "rule": "Never claim geometry, repair, conversion, or native validation without a supported local tool receipt."
+  "blockedRule": "Raw CAD-like files outside the approved public fixture manifest fail verification."
 }

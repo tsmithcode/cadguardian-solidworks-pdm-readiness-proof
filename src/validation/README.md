@@ -1,3 +1,3 @@
 # Validation
 
-Validation examples are intentionally synthetic and safe for public review.
+Validation examples are public-safe and backed by approved fixtures.

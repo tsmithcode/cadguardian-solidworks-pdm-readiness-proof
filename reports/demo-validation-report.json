@@ -1,33 +1,46 @@
 {
-  "requestId": "cadg-solidworks-demo-001",
-  "runtimeDecision": "PDM readiness assessment before automation or migration.",
+  "requestId": "cadg-solidworks-kit-001",
+  "kitType": "CAD Guardian quick-start automation kit",
+  "repo": "tsmithcode/cadguardian-solidworks-pdm-readiness-proof",
+  "runtimeDecision": "Use C# for package readiness and a native SolidWorks/PDM adapter only after file references, custom properties, and release states are named.",
+  "apiSignals": [
+    "SldWorks",
+    "IModelDoc2",
+    "IModelDocExtension",
+    "CustomPropertyManager",
+    "IAssemblyDoc",
+    "IComponent2",
+    "IEdmAddIn5",
+    "IEdmVault5",
+    "IEdmCmd"
+  ],
   "expectedOutputs": [
-    "file reference map",
-    "custom property report",
-    "BOM reconciliation",
-    "release state checklist"
+    "pdm-readiness-score",
+    "custom-property-report",
+    "BOM-checks",
+    "native adapter notes"
   ],
   "validation": [
     {
-      "rule": "properties present",
+      "rule": "SolidWorks and STEP fixtures are present and attributed",
       "status": "review-ready",
-      "evidence": "Synthetic fixture only. Run local CAD checks against AgentOps-approved source files for tool receipts."
+      "evidence": "Public quick-start kit fixture, API walkthrough, or native adapter example is present."
     },
     {
-      "rule": "BOM rows reconcile",
+      "rule": "STEP fixture exposes ISO-10303 markers",
       "status": "review-ready",
-      "evidence": "Synthetic fixture only. Run local CAD checks against AgentOps-approved source files for tool receipts."
+      "evidence": "Public quick-start kit fixture, API walkthrough, or native adapter example is present."
     },
     {
-      "rule": "references categorized",
+      "rule": "Custom property, BOM, and release-state checks are represented",
       "status": "review-ready",
-      "evidence": "Synthetic fixture only. Run local CAD checks against AgentOps-approved source files for tool receipts."
+      "evidence": "Public quick-start kit fixture, API walkthrough, or native adapter example is present."
     },
     {
-      "rule": "release owner named",
+      "rule": "SolidWorks API and PDM add-in handoff is documented",
       "status": "review-ready",
-      "evidence": "Synthetic fixture only. Run local CAD checks against AgentOps-approved source files for tool receipts."
+      "evidence": "Public quick-start kit fixture, API walkthrough, or native adapter example is present."
     }
   ],
-  "publicBoundary": "No private client files, login material, raw opportunity notes, or catalog-only native CAD binaries are included."
+  "publicBoundary": "No private client files, login material, raw opportunity notes, or license-uncertain CAD assets are included."
 }

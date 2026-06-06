@@ -1,33 +1,16 @@
 # Runtime Guide
 
-## Default public runtime
+## Public runtime
 
-The default runtime is Node.js plus synthetic fixtures:
+- Node.js for repo verification and synthetic demo.
+- .NET 10 for the C# quickstart.
+- No licensed CAD software required.
 
-```bash
-npm run doctor
-npm run verify
-npm run demo
-```
+## Optional native runtime
 
-Expected output: `reports/demo-validation-report.json`.
+Use C# for package readiness and a native SolidWorks/PDM adapter only after file references, custom properties, and release states are named.
 
-## Optional native/runtime path
+## Native/API examples
 
-Run:
-
-```bash
-npm run runtime:check
-```
-
-This command only reports visible local runtime hints. It does not prove CAD execution.
-
-## Runtime decision for this proof
-
-PDM readiness assessment before automation or migration.
-
-## AgentOps boundary
-
-NIST unrestricted STEP/SolidWorks references stay catalog-controlled. This repo publishes manifests, synthetic BOM/property data, and validation posture.
-
-Native CAD files, private client material, credentials, source-system exports, and raw opportunity notes stay outside this public repo.
+- native/solidworks-pdm/CadGuardianSolidWorksAudit.cs
+- native/solidworks-pdm/CadGuardianPdmAddIn.cs

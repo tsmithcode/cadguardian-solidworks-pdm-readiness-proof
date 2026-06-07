@@ -1,74 +1,108 @@
 <p align="left">
-  <a href="https://www.cadguardian.com/">
+  <a href="https://www.cadguardian.com/services/solidworks-pdm-readiness">
     <img src="assets/cad-guardian-logo-highlighted.png" alt="CAD Guardian logo" width="120">
   </a>
 </p>
 
 # SolidWorks and PDM Readiness Quick-Start Kit
 
-CAD Guardian Pareto quick-start automation kit for drafters, CAD automation peers, technical interviews, and buyer-facing business-case discussions.
+Evaluator-first proof that a CAD Guardian readiness workflow can score file references, custom properties, BOM readiness, and release-state ownership before a SolidWorks API adapter or PDM add-in touches production files.
 
-> This CAD library is in development. This is an early public preview for feedback on the best business case, workflow shape, and proof path.
+Service lane: [SolidWorks/PDM Readiness](https://www.cadguardian.com/services/solidworks-pdm-readiness)
 
-## Live site
+Live proof page: [GitHub Pages](https://tsmithcode.github.io/cadguardian-solidworks-pdm-readiness-proof/) | [Download ZIP](https://github.com/tsmithcode/cadguardian-solidworks-pdm-readiness-proof/archive/refs/heads/main.zip) | [CAD Guardian](https://www.cadguardian.com/) | [TSmithCode.ai](https://www.tsmithcode.ai/)
 
-- GitHub Pages: https://tsmithcode.github.io/cadguardian-solidworks-pdm-readiness-proof/
-- Download ZIP: https://github.com/tsmithcode/cadguardian-solidworks-pdm-readiness-proof/archive/refs/heads/main.zip
-- CAD Guardian: https://www.cadguardian.com/
-- TSmithCode.ai: https://www.tsmithcode.ai/
-- Service page: https://www.cadguardian.com/services/solidworks-pdm-readiness
+## Best for
 
-## Why this exists
+- Product teams preparing for SolidWorks cleanup, migration, PDM automation, or release process repair.
+- CAD/PDM evaluators who need a public, runnable proof before sharing private samples.
+- Technical reviewers checking whether the first useful automation slice is narrow enough to trust.
 
-Score file references, custom properties, BOM readiness, and release-state ownership before cleanup, migration, or PDM automation expands.
+## Decision this proves
 
-## Fast run
+Run this repo to decide whether one product family is ready for a private-sample readiness pass, or whether the first move should be cleanup, PDM state mapping, or a smaller API adapter.
+
+The quick-start checks the public fixture package for:
+
+- file reference inventory signals;
+- custom property and BOM readiness signals;
+- release-state ownership boundaries;
+- native SolidWorks API and PDM add-in handoff vocabulary.
+
+## Run locally
 
 ```bash
 npm run doctor
 npm run verify
 npm run demo
-dotnet build quickstart
+npm run quickstart:build
+npm run sanitize
 ```
 
-`npm run demo` runs the C# quickstart and writes `reports/quickstart-report.json`.
+`npm run demo` runs the C# quickstart:
 
-## What is worth reusing
+```bash
+dotnet run --project quickstart
+```
 
-- `quickstart/Program.cs`: a small C# package-readiness engine with fixture receipts, Pareto checks, native runtime gates, and a JSON report.
-- `native/`: optional API/runtime examples for the licensed CAD environment.
-- `fixtures/public/`: approved public CAD fixtures only.
-- `docs/USER_GUIDE.md`: how to run and adapt the kit.
-- `docs/INTERVIEW_SCRIPT.md`: how to explain the business case without guessing.
+## Expected output
 
-## STAR story
+The demo writes:
 
-**Situation:** A product team wants cleanup, automation, or migration, but file references, custom properties, BOM rows, and release states are not trustworthy yet.
+```text
+reports/quickstart-report.json
+```
 
-**Task:** Score readiness before a SolidWorks API or PDM add-in touches production files.
+The report includes:
 
-**Action:** Bundle public STEP/SolidWorks fixtures, validate package metadata, and show COM/API plus PDM add-in scaffolds.
+- `Status`: `ready-for-private-sample` or `needs-review`.
+- `BusinessImpact`: why this readiness proof exists.
+- `Fixtures`: approved public fixture receipts with size and SHA-256.
+- `ParetoChecks`: file reference, custom property/BOM, and PDM release-state checks.
+- `ReusableRoutines`: code patterns intended for adaptation.
+- `ApiSignals`: SolidWorks API and PDM vocabulary for the next technical conversation.
 
-**Result:** A reviewer can run the kit, inspect readiness, and decide when native SolidWorks or PDM execution becomes justified.
+## Proof boundary
 
-## Pareto checks
+This is a public readiness proof, not a production vault tool. It proves that the first evaluation can be narrow, inspectable, and tied to business risk before any licensed SolidWorks or PDM runtime work begins.
 
-- **File reference inventory:** Stops migration or automation from breaking references users trust. Handoff: `IModelDoc2`, `IModelDocExtension`, and selected document reference inspection.
-- **Custom property and BOM readiness:** Finds the few fields that drive quote, manufacturing, and release errors. Handoff: `CustomPropertyManager`, `IAssemblyDoc`, `IComponent2`, and BOM extraction.
-- **PDM release-state boundary:** Keeps PDM work focused on ownership, state, and approval instead of broad vault churn. Handoff: `IEdmAddIn5`, `IEdmVault5`, and `IEdmCmd` after release states are named.
+The repo intentionally separates:
 
-## API and runtime signals
+- public fixture scanning in `quickstart/Program.cs`;
+- optional native examples in `native/solidworks-pdm/`;
+- evaluator documentation in `docs/`;
+- generated demo output at `reports/quickstart-report.json`.
 
-- SldWorks
-- IModelDoc2
-- IModelDocExtension
-- CustomPropertyManager
-- IAssemblyDoc
-- IComponent2
-- IEdmAddIn5
-- IEdmVault5
-- IEdmCmd
+## What to send
+
+For a CAD Guardian evaluation, send:
+
+- the generated `reports/quickstart-report.json`;
+- the product family or package type to evaluate next;
+- required custom properties and BOM fields;
+- release states, owners, and approval gates;
+- the first business decision you need from the readiness pass.
+
+Do not send credentials, private drawings, private vault exports, or unapproved CAD fixtures through this public repo.
+
+## Related CAD Guardian page
+
+[SolidWorks/PDM Readiness](https://www.cadguardian.com/services/solidworks-pdm-readiness)
+
+## Native runtime boundary
+
+The public quickstart does not automate a live SolidWorks session or PDM vault. Native work belongs behind an approved licensed environment after the readiness decision is clear.
+
+Repo-specific native examples:
+
+- `native/solidworks-pdm/CadGuardianSolidWorksAudit.cs`: SolidWorks API audit boundary for `SldWorks`, `IModelDoc2`, `IModelDocExtension`, `CustomPropertyManager`, `IAssemblyDoc`, and `IComponent2`.
+- `native/solidworks-pdm/CadGuardianPdmAddIn.cs`: PDM add-in boundary for `IEdmAddIn5`, `IEdmVault5`, and `IEdmCmd`.
 
 ## Public fixture boundary
 
-Only approved public sample files are bundled. No client files, private drawings, credentials, raw opportunity notes, or license-uncertain CAD assets are included.
+Only approved public sample files are bundled:
+
+- `fixtures/public/nist/nist_ctc_01_asme1_rd_sw1802.SLDPRT`
+- `fixtures/public/nist/nist_ctc_01_asme1_rd.stp`
+
+No client files, private drawings, credentials, private names, raw opportunity notes, or license-uncertain CAD assets are included.

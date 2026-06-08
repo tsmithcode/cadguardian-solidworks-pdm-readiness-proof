@@ -1,16 +1,26 @@
 <p align="left">
-  <a href="https://www.cadguardian.com/services/solidworks-pdm-readiness">
+  <a href="https://www.cadguardian.com/solidworks-automation-consulting">
     <img src="assets/cad-guardian-logo-highlighted.png" alt="CAD Guardian logo" width="120">
   </a>
 </p>
 
-# SolidWorks and PDM Readiness Quick-Start Kit
+# SolidWorks and PDM Readiness Public Runnable Evaluation Kit
 
-Evaluator-first proof that a CAD Guardian readiness workflow can score file references, custom properties, BOM readiness, and release-state ownership before a SolidWorks API adapter or PDM add-in touches production files.
+Evaluator-first public evaluation kit showing how a CAD Guardian readiness workflow can score file references, custom properties, BOM readiness, and release-state ownership before a SolidWorks API adapter or PDM add-in touches production files.
 
-Service lane: [SolidWorks/PDM Readiness](https://www.cadguardian.com/services/solidworks-pdm-readiness)
+Canonical consulting paths: [SolidWorks automation consulting](https://www.cadguardian.com/solidworks-automation-consulting) and [PDM/PLM workflow consulting](https://www.cadguardian.com/pdm-plm-workflow-consulting)
 
 Live proof page: [GitHub Pages](https://tsmithcode.github.io/cadguardian-solidworks-pdm-readiness-proof/) | [Download ZIP](https://github.com/tsmithcode/cadguardian-solidworks-pdm-readiness-proof/archive/refs/heads/main.zip) | [CAD Guardian](https://www.cadguardian.com/) | [TSmithCode.ai](https://www.tsmithcode.ai/)
+
+## CAD Guardian procurement fit
+
+- Legal/procurement entity: CAD Guardian LLC, Delaware LLC.
+- Primary classification: NAICS 541512 Computer Systems Design Services; SIC 7373 Computer Integrated Systems Design.
+- Secondary implementation fit: NAICS 541511 Custom Computer Programming Services when the engagement includes custom software, API, desktop, reporting, or integration work.
+- Public offer fit: Drawing/Document Automation Slice; Implementation Build Slice; PDM/PLM workflow consulting lane.
+- Canonical consulting paths: [SolidWorks automation consulting](https://www.cadguardian.com/solidworks-automation-consulting) and [PDM/PLM workflow consulting](https://www.cadguardian.com/pdm-plm-workflow-consulting).
+- Public runnable proof kit available; private customer artifacts are not exposed.
+- GitHub social preview asset: `assets/github-social-preview.png` with SVG source at `assets/github-social-preview.svg`.
 
 ## Best for
 
@@ -87,7 +97,7 @@ Do not send credentials, private drawings, private vault exports, or unapproved 
 
 ## Related CAD Guardian page
 
-[SolidWorks/PDM Readiness](https://www.cadguardian.com/services/solidworks-pdm-readiness)
+[SolidWorks automation consulting](https://www.cadguardian.com/solidworks-automation-consulting) | [PDM/PLM workflow consulting](https://www.cadguardian.com/pdm-plm-workflow-consulting)
 
 ## Native runtime boundary
 

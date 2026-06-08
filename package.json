@@ -1,6 +1,18 @@
 {
   "name": "cadguardian-solidworks-pdm-readiness-proof",
   "version": "3.0.0",
+  "description": "CAD Guardian public runnable SolidWorks and PDM readiness evaluation kit for drawing, BOM, release-state, and workflow consulting.",
+  "keywords": [
+    "cadguardian",
+    "cad-automation",
+    "solidworks",
+    "pdm",
+    "plm",
+    "bom",
+    "drawing-automation",
+    "naics-541512",
+    "sic-7373"
+  ],
   "private": false,
   "type": "module",
   "scripts": {
